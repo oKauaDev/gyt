@@ -11,7 +11,7 @@ export default async function gyt() {
   function isGitRepository() {
     const directory = process.cwd();
 
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       const gitDir = path.join(directory, ".git");
 
       fs.access(gitDir, fs.constants.F_OK, (err) => {

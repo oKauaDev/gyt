@@ -55,11 +55,13 @@ program
           return;
         }
 
-        // console.log(`${TEXT.COLOR.RED}❌ Erro: ${TEXT.COLOR.YELLOW}${e.message}`);
+        console.log(`${TEXT.COLOR.RED}❌ Erro: ${TEXT.COLOR.YELLOW}${e.message}`);
+        process.exit();
         return;
       }
 
-      // console.log(`${TEXT.COLOR.RED}❌ Erro: ${TEXT.COLOR.YELLOW}${String(e)}`);
+      console.log(`${TEXT.COLOR.RED}❌ Erro: ${TEXT.COLOR.YELLOW}${String(e)}`);
+      process.exit();
     }
   });
 
@@ -81,10 +83,12 @@ program
         }
 
         console.log(`${TEXT.COLOR.RED}❌ Erro: ${TEXT.COLOR.YELLOW}${e.message}`);
+        process.exit();
         return;
       }
 
       console.log(`${TEXT.COLOR.RED}❌ Erro: ${TEXT.COLOR.YELLOW}${String(e)}`);
+      process.exit();
     }
   });
 

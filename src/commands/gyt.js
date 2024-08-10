@@ -6,6 +6,7 @@ import fs from "fs";
 import exec from "../utils/exec.js";
 import IA from "../utils/IA.js";
 import config from "../utils/config.js";
+import emoji from "../utils/emoji.js";
 
 export default async function gyt() {
   function isGitRepository() {
@@ -63,7 +64,7 @@ export default async function gyt() {
 
   let prompt = response_ia.resume;
 
-  console.log(` ${chalk.blue("◇")}  ${prompt}`);
+  console.log(` ${chalk.blue("◇")}  ${emoji(prompt)}`);
 
   console.log("│");
 
@@ -108,6 +109,7 @@ export default async function gyt() {
   closeAddFilesSpinner();
 
   const closeSendCommitSpinner = spinner(` ${chalk.blue("◇")}  🚀  Estamos enviando o commit...`);
+  prompt = prompt.replace(/"/g, '\\"');
 
   await exec(`git commit -m "${prompt}"`);
 

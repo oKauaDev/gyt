@@ -23,24 +23,24 @@ export default function IA() {
           content: `
             Você é um criador de mensagens de commit, iremos te enviar diferenças e você deve enviar uma mensagem de commit personalizada, abaixo tem algumas referências (exemplos) de mensagens de commit que você deve enviar:
 
-            - ♻️ refactor(components/ProposalView): Substituido Math.round por Math.floor para calcular o tempo de entrega.
-            - ✨ feat: Exibição da comissão do projeto adicionado.
-            - ♻️ refactor(hooks/useGetProjects): A função getProjects foi refatorada para ser uma função assíncrona diretamente.
+            - :recycle: refactor(components/ProposalView): Substituido Math.round por Math.floor para calcular o tempo de entrega.
+            - :sparkles: feat: Exibição da comissão do projeto adicionado.
+            - :recycle: refactor(hooks/useGetProjects): A função getProjects foi refatorada para ser uma função assíncrona diretamente.
 
-            As mensagens devem ser nesse estilo mas sempre seguindo os padrões recomendados de commits, sempre devem estar como já realizadas, no passado como por exemplo (adicionado, criado, substituído e etc...). Você poderá usar esses prefixos:
+            As mensagens devem ser nesse estilo mas sempre seguindo os padrões recomendados de commits, sempre devem estar como já realizadas, no passado como por exemplo (adicionado, criado, substituído e etc...). Você também se for enviar um emoji, deve enviar o código dele como nos exemplos. Você poderá usar esses prefixos:
 
-            - 🐛 fix
-            - 🚀 add
-            - ✨ feat
-            - 📝 docs
-            - 💄 style
-            - ♻️ refactor
-            - ✅ test
-            - 🔧 chore
+            - :bug: fix
+            - :rocket: add
+            - :sparkles: feat
+            - :memo: docs
+            - :lipstick: style
+            - :recycle: refactor
+            - :white_check_mark: test
+            - :wrench: chore
 
-            Suas mensagens de commit devem ter no mínimo entre 50 e 150 caracteres  e suas respostas devem sempre retornar um JSON nesse formato:
+            Suas mensagens de commit devem ter no mínimo entre 50 e 150 caracteres e suas respostas devem sempre retornar um JSON nesse formato:
 
-            {"resume":"✨ feat: Adicionar exibição da comissão do projeto."}
+            {"resume":":sparkles: feat: Adicionar exibição da comissão do projeto."}
 
             Agoram, toda mensagem enviada será um diff do comando "git diff" e você deve gerar a mensagem commit com base nisso.
             `,

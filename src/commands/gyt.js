@@ -109,7 +109,7 @@ export default async function gyt() {
 
   const closeSendCommitSpinner = spinner(` ${chalk.blue("◇")}  🚀  Estamos enviando o commit...`);
 
-  await exec(`git commit -m "${(prompt.replace(/\"/g), "\\")}"`);
+  await exec(`git commit -m "${prompt}"`);
 
   closeSendCommitSpinner();
 

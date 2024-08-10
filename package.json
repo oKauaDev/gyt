@@ -1,0 +1,21 @@
+{
+  "name": "gyt-ia",
+  "version": "1.0.2",
+  "main": "src/index.js",
+  "type": "module",
+  "bin": {
+    "gyt": "./src/index.js"
+  },
+  "scripts": {
+    "dev": "node src/index.js"
+  },
+  "author": "oKauaDev",
+  "license": "ISC",
+  "description": "Tenha mensagens dos seus commits geradas por IA.",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "inquirer": "^10.1.8",
+    "openai": "^4.55.4",
+    "ora": "^8.0.1"
+  }
+}

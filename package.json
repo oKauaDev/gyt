@@ -2,6 +2,8 @@
   "name": "gyt-ia",
   "version": "1.0.5",
   "main": "src/index.js",
+  "description": "Tenha mensagens dos seus commits geradas por IA.",
+  "homepage": "https://github.com/oKauaDev/gyt",
   "type": "module",
   "bin": {
     "gyt": "./src/index.js"
@@ -11,7 +13,6 @@
   },
   "author": "oKauaDev",
   "license": "ISC",
-  "description": "Tenha mensagens dos seus commits geradas por IA.",
   "dependencies": {
     "commander": "^12.1.0",
     "inquirer": "^10.1.8",

@@ -47,7 +47,6 @@ program
     try {
       await gyt(args);
     } catch (e) {
-      console.clear();
       if (e instanceof Error) {
         if (e.message.includes("force closed")) {
           console.log("\n\n🔴 Operação abortada pelo usuário. Saindo...\n");
@@ -55,12 +54,12 @@ program
           return;
         }
 
-        console.log(`${TEXT.COLOR.RED}❌ Erro: ${TEXT.COLOR.YELLOW}${e.message}`);
+        console.log(`\n${TEXT.COLOR.RED}❌ Erro: ${TEXT.COLOR.YELLOW}${e.message}`);
         process.exit();
         return;
       }
 
-      console.log(`${TEXT.COLOR.RED}❌ Erro: ${TEXT.COLOR.YELLOW}${String(e)}`);
+      console.log(`\n${TEXT.COLOR.RED}❌ Erro: ${TEXT.COLOR.YELLOW}${String(e)}`);
       process.exit();
     }
   });
@@ -74,7 +73,6 @@ program
     try {
       await login(args.remove ?? false);
     } catch (e) {
-      console.clear();
       if (e instanceof Error) {
         if (e.message.includes("force closed")) {
           console.log("\n\n🔴 Operação abortada pelo usuário. Saindo...\n");
@@ -82,12 +80,12 @@ program
           return;
         }
 
-        console.log(`${TEXT.COLOR.RED}❌ Erro: ${TEXT.COLOR.YELLOW}${e.message}`);
+        console.log(`\n${TEXT.COLOR.RED}❌ Erro: ${TEXT.COLOR.YELLOW}${e.message}`);
         process.exit();
         return;
       }
 
-      console.log(`${TEXT.COLOR.RED}❌ Erro: ${TEXT.COLOR.YELLOW}${String(e)}`);
+      console.log(`\n${TEXT.COLOR.RED}❌ Erro: ${TEXT.COLOR.YELLOW}${String(e)}`);
       process.exit();
     }
   });

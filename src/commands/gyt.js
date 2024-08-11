@@ -43,7 +43,13 @@ export default async function gyt() {
 
   const closeCheckDiff = spinner(`${chalk.blue("◇")}  🔎 Buscando alterações feitas no projeto...`);
 
-  const diff = await exec(`git diff`);
+  let diff = "";
+
+  try {
+    diff = await exec(`git diff -- . ':!package-lock.json'`);
+  } catch {
+    diff = await exec("git status");
+  }
 
   closeCheckDiff();
 

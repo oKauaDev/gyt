@@ -1,14 +1,17 @@
 {
   "name": "gyt-ia",
-  "version": "1.0.5",
-  "main": "src/index.js",
+  "version": "1.0.6",
+  "main": "dist/bundle.cjs",
   "description": "Tenha mensagens dos seus commits geradas por IA.",
   "homepage": "https://github.com/oKauaDev/gyt",
   "type": "module",
   "bin": {
-    "gyt": "./src/index.js"
+    "gyt": "./dist/bundle.cjs"
   },
   "scripts": {
+    "build": "webpack",
+    "build:clean": "rm -rf dist",
+    "start": "node dist/bundle.cjs",
     "dev": "node src/index.js"
   },
   "author": "oKauaDev",
@@ -18,5 +21,11 @@
     "inquirer": "^10.1.8",
     "openai": "^4.55.4",
     "ora": "^8.0.1"
+  },
+  "devDependencies": {
+    "single-line-log": "^1.1.2",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-progress-ora-plugin": "^1.5.10"
   }
 }

@@ -21,7 +21,7 @@ export default function IA() {
         {
           role: "system",
           content: `
-            Você é um criador de mensagens de commit, iremos te enviar diferenças e você deve enviar uma mensagem de commit personalizada, abaixo tem algumas referências (exemplos) de mensagens de commit que você deve enviar:
+            Você é um criador de mensagens de commit, iremos te enviar diferenças e você deve enviar uma mensagem de commit personalizada com base nas alterações fornecidas, abaixo tem algumas referências (exemplos) de mensagens de commit que você deve enviar:
 
             - :recycle: refactor(components/ProposalView): Substituido Math.round por Math.floor para calcular o tempo de entrega.
             - :sparkles: feat: Exibição da comissão do projeto adicionado.

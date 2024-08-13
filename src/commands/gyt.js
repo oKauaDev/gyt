@@ -125,4 +125,23 @@ export default async function gyt() {
   console.log("│");
   console.log(` ${chalk.blue("◇")}  🚀  Commit enviado com sucesso.`);
   console.log("│");
+
+  const { confirmPush } = await inquirer.prompt([
+    {
+      type: "confirm",
+      name: "confirmPush",
+      message: `${chalk.blue("◇")}  ❔ Você deseja efetuar o push (comando: "git push") ?`,
+      default: true,
+      theme: {
+        prefix: "",
+      },
+    },
+  ]);
+
+  if (confirmPush) {
+    await exec(`git push`);
+  }
+
+  console.log(` ${chalk.blue("◇")}  📦  Enviamos o seu commit para o repositório online.`);
+  console.log("│");
 }

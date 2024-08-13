@@ -139,9 +139,11 @@ export default async function gyt() {
   ]);
 
   if (confirmPush) {
+    const closePushSpinner = spinner(` ${chalk.blue("◇")}  🚀  Estamos enviando o commit...`);
     await exec(`git push`);
+    closePushSpinner();
+    console.log("│");
+    console.log(` ${chalk.blue("◇")}  📦  Enviamos o seu commit para o repositório online.`);
+    console.log("│");
   }
-
-  console.log(` ${chalk.blue("◇")}  📦  Enviamos o seu commit para o repositório online.`);
-  console.log("│");
 }

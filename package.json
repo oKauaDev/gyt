@@ -1,6 +1,6 @@
 {
   "name": "gyt-ia",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "src/index.js",
   "description": "Tenha mensagens dos seus commits geradas por IA.",
   "homepage": "https://github.com/oKauaDev/gyt",
@@ -17,6 +17,7 @@
     "commander": "^12.1.0",
     "inquirer": "^10.1.8",
     "openai": "^4.55.4",
-    "ora": "^8.0.1"
+    "ora": "^8.0.1",
+    "simple-git": "^3.25.0"
   }
 }

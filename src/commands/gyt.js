@@ -7,6 +7,7 @@ import exec from "../utils/exec.js";
 import IA from "../utils/IA.js";
 import config from "../utils/config.js";
 import emoji from "../utils/emoji.js";
+import GitManager from "../utils/GitManager.js";
 
 export default async function gyt() {
   function isGitRepository() {
@@ -46,9 +47,9 @@ export default async function gyt() {
   let diff = "";
 
   try {
-    diff = await exec(`git diff -- . ':!package-lock.json'`);
+    diff = await GitManager.diff();
   } catch {
-    diff = await exec("git status");
+    diff = await GitManager.status();
   }
 
   closeCheckDiff();

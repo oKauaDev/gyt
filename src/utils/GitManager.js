@@ -3,7 +3,7 @@ import { simpleGit } from "simple-git";
 export default class GitManager {
   static diff() {
     return new Promise((resolve, reject) => {
-      simpleGit().diff(undefined, (err, changes) => {
+      simpleGit().diff(["--patch", "--diff-filter=ACMRT"], (err, changes) => {
         if (err) {
           reject(err);
         } else {
